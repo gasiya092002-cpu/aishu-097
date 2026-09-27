@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B1020;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism and glow styles */
+.glass-panel {
+  background: rgba(21, 28, 44, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.glass-card {
+  background: rgba(26, 34, 56, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.25);
+}
+
+.glow-text-green {
+  text-shadow: 0 0 15px rgba(57, 255, 136, 0.5);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F293D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
